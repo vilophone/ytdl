@@ -14,14 +14,14 @@ do
 	elif [[ $x == *"album"* ]]; then
    		spotdl -a $x
 		spotdl -l *.txt
-		./folderize.sh
+		~/ytdl/./folderize.sh
 	elif [[ $x == *"playlist"* ]]; then
    		spotdl -p $x
 		spotdl -l *.txt
 		echo "Sort by Artist OR Keep in Playlist? (1/2)"
 		read a
 		if [[ $a == 1 ]] ; then
-			./folderize.sh
+			~/ytdl/./folderize.sh
 		else
 			echo "What would you like to name this playlist?"
 			read b
@@ -31,11 +31,11 @@ do
 		fi
 	elif [[ $x == *"track"* ]]; then
    		spotdl -s $x
-		./folderize.sh
+		~/ytdl/./folderize.sh
 	elif [[ $x == *"artist"* ]]; then
   		spotdl -aa $x
 		spotdl -l *.txt
-		./folderize.sh
+		~/ytdl/./folderize.sh
 	fi
 done
 
