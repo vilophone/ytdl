@@ -14,14 +14,14 @@ do
 	elif [[ $x == *"album"* ]]; then
    		spotdl -a $x
 		spotdl -l *.txt
-		./luis-folderize.sh #different from regular folderize because switcheroo is built into luis-folderize
+		~/ytdl/./luis-folderize.sh #different from regular folderize because switcheroo is built into luis-folderize
 	elif [[ $x == *"playlist"* ]]; then
    		spotdl -p $x
 		spotdl -l *.txt
 		echo "Sort by Artist OR Keep in Playlist? (1/2)"
 		read a
 		if [[ $a == 1 ]] ; then
-			./luis-folderize.sh
+			~/ytdl/./luis-folderize.sh
 		else
 			echo "What would you like to name this playlist?"
 			read b
@@ -31,11 +31,11 @@ do
 		fi
 	elif [[ $x == *"track"* ]]; then
    		spotdl -s $x
-		./luis-folderize.sh
+		~/ytdl/./luis-folderize.sh
 	elif [[ $x == *"artist"* ]]; then
   		spotdl -aa $x
 		spotdl -l *.txt
-		./luis-folderize.sh
+		~/ytdl/./luis-folderize.sh
 	fi
 done
 
