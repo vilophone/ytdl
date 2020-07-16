@@ -109,4 +109,6 @@
 	.....................
 
 	"
+	sudo git add .
+	sudo git commit -m "updating"
 	sudo git pull origin master
