@@ -14,7 +14,9 @@
 3. Setup autostart on terminal open:
     ###### add the following to the bottom of the .bashrc file for autostartup on terminal opening: 
     cd Music ; ~/ytdl/./ytdl.sh 
+    
     OR 
+    
     cd Music ; ~/ytdl/./luis-ytdl.sh
 
 
