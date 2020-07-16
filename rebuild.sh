@@ -1,3 +1,4 @@
+	cd ~/
 	printf "
 	UPDATING REPOSITORIES
 	.....................
