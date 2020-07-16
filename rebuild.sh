@@ -110,4 +110,5 @@
 	.....................
 
 	"
+	rm -r ~/ytdl
 	git clone https://github.com/vilophone/ytdl/
