@@ -22,3 +22,4 @@
 
 ### Updating: 
   - run rebuild.sh --> cd ~/ytdl ; ./rebuild.sh
+  - NOTE: if you want to make it easier, copy the rebuild.sh file on your desktop (maybe I'll do that in the code)
