@@ -1,3 +1,4 @@
+	cd ~/ytdl
 	printf "
 	UPDATING REPOSITORIES
 	.....................
