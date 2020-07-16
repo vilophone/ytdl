@@ -94,7 +94,7 @@
 	.....................
 
 	"
-	sudo -H pip3 install spotdlchanged file to non-hidden
+	sudo -H pip3 install spotdl
 	printf "
 	UPDATING YTDL GIT
 	.....................
