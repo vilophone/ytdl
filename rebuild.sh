@@ -1,4 +1,3 @@
-	cd ~/ytdl
 	printf "
 	UPDATING REPOSITORIES
 	.....................
@@ -110,6 +109,4 @@
 	.....................
 
 	"
-	sudo git add .
-	sudo git commit -m "updating"
-	sudo git pull origin master
+	git clone https://github.com/vilophone/ytdl/
