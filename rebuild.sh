@@ -112,4 +112,5 @@
 	"
 	rm -rf ~/ytdl
 	git clone https://github.com/vilophone/ytdl/
+	cd ~/ytdl ; chmod 777 * ; exit
 	# restart terminal
