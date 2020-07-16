@@ -6,6 +6,7 @@
 2. Copy the following lines into the terminal and press enter after each line: 
 
 cd ~/ ; git clone https://github.com/vilophone/ytdl
+
 cd ytdl ; sudo chmod 777 *.sh 
 #### enter your password
 ./build.sh
