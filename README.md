@@ -1,8 +1,6 @@
 # ytdl
 
 
-### Installation:
-
 #### Linux
 
 1. Paste the following into the terminal
