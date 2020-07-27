@@ -41,16 +41,12 @@ For Linux & Windows 10, paste the following into the terminal:
 
 
 ###### Auto-Skip Overwrite & 'song - artist' Output
-Paste the following into the terminal: 
- 
-    - vim ~/.config/spotdl/config.yml
 
+Paste the following into the terminal: 
+    - vim ~/.config/spotdl/config.yml
     - change line 10 to the following: 
- 
         - output_file: '{track-name} - {artist}.{output-ext}'  
- 
     - change line 11 to the following:
-    
         - overwrite: skip
         
         
