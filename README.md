@@ -13,11 +13,15 @@
 
 1. In "Turn Windows Features On and Off", check the "Windows Subsystem for Linux" option
 
-2. open the Ubuntu app and paste the following:
+2. Open the Ubuntu app and paste the following:
     - sudo apt update -y ; sudo apt upgrade -y ; sudo apt install git
     - cd ~/ ; git clone https://github.com/vilophone/ytdl
     - cd ytdl ; chmod 777 *
     - ./build.sh
+3. Add the following line with your Windows account name to ytdl.sh: 
+    - mv *.mp3* /mnt/c/Users/WINDOWS-ACCOUNT-NAME/Music
+    - delete the following line: 
+        - mv *.mp3* ~/Music
     
     
 #### Mac OSX
