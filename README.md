@@ -1,27 +1,48 @@
 # ytdl
 
+-----------------------------------------------------------------------------------------
+
 ### Installation:
 
-1. Open Terminal
-2. Copy the following lines into the terminal and press enter after each line: 
+#### Linux
 
-    cd ~/ ; git clone https://github.com/vilophone/ytdl
+1. Paste the following into the terminal
+    - cd ~/ ; git clone https://github.com/vilophone/ytdl
+    - cd ytdl ; sudo chmod 777 *.sh 
+    - ./build.sh
 
-    cd ytdl ; sudo chmod 777 *.sh 
-    ###### enter your password
-    ./build.sh
-    cd ~/ ; vim .bashrc
-3. Setup autostart on terminal open:
-    ###### add the following to the bottom of the .bashrc file for autostartup on terminal opening: 
-    cd Music ; ~/ytdl/./ytdl.sh 
+
+#### Windows 10 
+
+1. In "Turn Windows Features On and Off", check the "Windows Subsystem for Linux" option
+
+2. open the Ubuntu app and paste the following:
+    - sudo apt update -y ; sudo apt upgrade -y ; sudo apt install git
+    - cd ~/ ; git clone https://github.com/vilophone/ytdl
+    - cd ytdl ; chmod 777 *
+    - ./build.sh
     
-    OR 
     
-    cd Music ; ~/ytdl/./luis-ytdl.sh
+#### Mac OSX
+
+1. Paste the folling into the terminal:
+    - /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    - brew install youtube-dl
+    - brew install python3
+    - pip3 install spotdl
+    - brew install git
+    - cd ~/ ; git clone https://github.com/vilophone/ytdl
+    - cd ytdl ; sudo chmod 777 *.sh 
 
 
-### Updating: 
-  - run rebuild.sh --> cd ~/ytdl ; ./rebuild.sh
-  - NOTE: if you want to make it easier, copy the rebuild.sh file on your desktop (maybe I'll do that in the code)
+-----------------------------------------------------------------------------------------
 
-###### NOTE: you need to install youtube-dl and spotdl - this process is different for mac os vs linux
+###### Updating: 
+
+run rebuild.sh --> cd ~/ytdl ; ./rebuild.sh
+
+
+###### Auto-Starting: 
+
+Add the following to the bottom of the .bashrc file for autostartup on terminal opening (optional):
+    - cd Music ; ~/ytdl/./ytdl.sh 
