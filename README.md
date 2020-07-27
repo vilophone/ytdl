@@ -38,7 +38,8 @@
 
 ###### Updating: 
 
-run rebuild.sh --> cd ~/ytdl ; ./rebuild.sh
+For Linux & Windows 10, paste the following into the terminal: 
+    - cd ~/ytdl ; ./rebuild.sh
 
 
 ###### Auto-Starting: 
