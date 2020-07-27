@@ -40,6 +40,15 @@ For Linux & Windows 10, paste the following into the terminal:
     - cd ~/ytdl ; ./rebuild.sh
 
 
+###### Auto-Skip Overwrite & 'song - artist' Output
+Paste the following into the terminal: 
+    - vim ~/.config/spotdl/config.yml
+    - change line 10 to the following: 
+        - output_file: '{track-name} - {artist}.{output-ext}'  
+    - change line 11 to the following:
+        - overwrite: skip
+        
+        
 ###### Auto-Starting: 
 
 Add the following to the bottom of the .bashrc file for autostartup on terminal opening (optional):
