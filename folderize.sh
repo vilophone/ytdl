@@ -10,7 +10,3 @@ do
 done 
 
 # This only works for spotify songs because it requires finding '-'
-
-#RADIOFY
-#	song=${t#*-} ; song=${song%%.*} # set $song = track name without artist name at beginning and ".mp3" at the end
-#	mv "$t" "${song} - ${a}.mp3" # 
