@@ -58,3 +58,13 @@
 
 1. Add the following to the bottom of the .bashrc file for autostartup on terminal opening (optional):
     - cd Music ; ~/ytdl/./ytdl.sh 
+
+
+-----------------------------------------------------------------------------------------
+
+##### Features to Come in Future Updates: 
+
+1. Resume downloading after failed/halted download 
+2. Queue multiple links for later download 
+3. Luis Mode (switches file name from "artist - song" to "song - artist") 
+    - will no longer need luis-ytdl.sh and luis-folderize.sh
