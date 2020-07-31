@@ -10,3 +10,5 @@ do
 	((n-=1)) # decrement number of mp3 files by 1
 done 
 rm ls.txt
+
+# This is useful if you want to swap the file names if you want them the other way around
