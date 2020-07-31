@@ -3,9 +3,16 @@ do
 	rm *.txt
 	clear
 	printf " 
- ▀▄▀ ▄▀▄ █ █ ▀█▀ █ █ ██▄ ██▀   ▄▀▀ █▀▄ ▄▀▄ ▀█▀ █ █▀ ▀▄▀   █▀▄ ▄▀▄ █   █ █▄ █ █   ▄▀▄ ▄▀▄ █▀▄ ██▀ █▀▄
-  █  ▀▄▀ ▀▄█  █  ▀▄█ █▄█ █▄▄   ▄██ █▀  ▀▄▀  █  █ █▀  █    █▄▀ ▀▄▀ ▀▄▀▄▀ █ ▀█ █▄▄ ▀▄▀ █▀█ █▄▀ █▄▄ █▀▄
-
+                      ▄▄                                               ▄▄         
+▀████▀                ██            ▀████▄     ▄███▀                   ██         
+  ██                                  ████    ████                                
+  ██     ▀███  ▀███ ▀███  ▄██▀███     █ ██   ▄█ ██ ▀███  ▀███  ▄██▀██████  ▄██▀██ 
+  ██       ██    ██   ██  ██   ▀▀     █  ██  █▀ ██   ██    ██  ██   ▀▀ ██ ██▀  ██ 
+  ██     ▄ ██    ██   ██  ▀█████▄     █  ██▄█▀  ██   ██    ██  ▀█████▄ ██ ██      
+  ██    ▄█ ██    ██   ██  █▄   ██     █  ▀██▀   ██   ██    ██  █▄   ██ ██ ██▄    ▄
+██████████ ▀████▀███▄████▄██████▀   ▄███▄ ▀▀  ▄████▄ ▀████▀███▄██████▀████▄█████▀ 
+                                                                                                                                                                                                                                                                                                                                
+                                                                            
 "
 	printf "Paste a link to download: "
 	read x
@@ -13,39 +20,29 @@ do
 		youtube-dl --audio-format mp3 -x -i $x
 	elif [[ $x == *"album"* ]]; then
    		spotdl -a $x
-		spotdl -l *.txt
-		~/ytdl/./luis-folderize.sh #different from regular folderize because switcheroo is built into luis-folderize
+		spotdl -o mp3 -l *.txt
 	elif [[ $x == *"playlist"* ]]; then
-   		spotdl -p $x
-		spotdl -l *.txt
-		echo "Sort by Artist OR Keep in Playlist? (1/2)"
-		read a
-		if [[ $a == 1 ]] ; then
-			~/ytdl/./luis-folderize.sh
-		else
-			echo "What would you like to name this playlist?"
-			read b
-			# automated: curl $x > playlistName.txt ; search for and copy all between first <title> tags into $playlistName
-			mkdir "$b"
-			mv *.mp3* "$b"
+   		spotdl -o mp3 -p $x
+		spotdl -o mp3 -l *.txt
+		echo "Would you like to keep this music in one playlist? (y/n)"
+		read b
+		if [[ $b == "y" ]]; then
+			echo "What would you like to name this playlist? "
+			read n
+			mv *.mp3* ~/Music
+			cd ~/Music
+			mkdir "$n"
+			mv *.mp3* "$n"
 		fi
 	elif [[ $x == *"track"* ]]; then
-   		spotdl -s $x
-		~/ytdl/./luis-folderize.sh
+   		spotdl -o mp3 -s $x
 	elif [[ $x == *"artist"* ]]; then
-  		spotdl -aa $x
-		spotdl -l *.txt
-		~/ytdl/./luis-folderize.sh
+  		spotdl -o mp3 -aa $x
+		spotdl -o mp3 -l *.txt
 	fi
+	mv *.mp3* ~/Music
+	cd ~/Music/ ; ~/ytdl/./luis-folderize.sh ; cd ~/ytdl/
 done
 
-
-#Additions:
-# make no duplicates (check child folders for duplicates before downloading)
-# No <Enter> key required (Switch Case?)
-# Song+Artist+.mp3
-# Remote-Update
-# Installation file
-#
-#
-#
+#config "song - artist" manually
+# config always skip overwrite manually
